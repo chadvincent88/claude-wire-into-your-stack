@@ -84,7 +84,7 @@ In a short `NOTES.md`, answer in a few sentences each:
 ```
    git push -u origin <your-branch>
 ```
-3. Open a pull request and submit it through the platform, which copies your branch for review.
+3. Open a pull request against the main repository, not your fork, and submit it through the platform, which copies your branch for review.
 Before you submit, make sure that:
  
 - [ ] only the intended files are in the PR — the `.mcp.json`, the `.claude/` files, and `NOTES.md` — with no secrets committed
