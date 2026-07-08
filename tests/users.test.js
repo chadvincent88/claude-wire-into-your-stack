@@ -7,7 +7,12 @@ const store = require('../db/store');
 
 const server = http.createServer(app);
 
-test.after(() => server.close());
+test.before(() => new Promise((resolve, reject) => {
+  server.listen(0, (err) => (err ? reject(err) : resolve()));
+}));
+test.after(() => new Promise((resolve, reject) => {
+  server.close((err) => (err ? reject(err) : resolve()));
+}));
 test.beforeEach(() => store.reset());
 
 test('GET /users returns the seeded list', async () => {
