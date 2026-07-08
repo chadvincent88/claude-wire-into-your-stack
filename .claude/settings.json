@@ -1,0 +1,6 @@
+{
+  "permissions": {
+    "allow": ["mcp__tracker__list_issues", "mcp__tracker__get_issue"],
+    "deny": ["mcp__tracker__delete_issue"]
+  }
+}
