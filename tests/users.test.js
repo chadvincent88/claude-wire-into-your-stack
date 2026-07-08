@@ -8,7 +8,7 @@ const store = require('../db/store');
 const server = http.createServer(app);
 
 test.before(() => new Promise((resolve, reject) => {
-  server.listen(0, (err) => (err ? reject(err) : resolve()));
+  server.listen(0, '127.0.0.1', (err) => (err ? reject(err) : resolve()));
 }));
 test.after(() => new Promise((resolve, reject) => {
   server.close((err) => (err ? reject(err) : resolve()));
